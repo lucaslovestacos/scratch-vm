@@ -78,6 +78,11 @@ class Scratch3EventBlocks {
         return false;
     }
 
+    sendBrowserNotification (args, util) {
+        const value = Cast.toString(args.VALUE)
+        alert(value);
+    }
+    
     broadcast (args, util) {
         const broadcastVar = util.runtime.getTargetForStage().lookupBroadcastMsg(
             args.BROADCAST_OPTION.id, args.BROADCAST_OPTION.name);
